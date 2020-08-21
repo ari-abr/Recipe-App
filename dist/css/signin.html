@@ -1,66 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/c7f0d626a8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c7f0d626a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Recipe Land</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="header navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="website-logo navbar-brand">
+          <img
+            src="Recipe-Land-logo.png"
+            width="200"
+            alt="logo"
+            class="logo d-inline-block"
+          />
+        </a>
+
+        <button
+          class="shopping-list-button btn btn-navbar btn-outline-success my-2 my-sm-0"
+          type="submit"
+        >
+          <a href="/index.html">Home <i class="fas fa-home"></i></a>
         </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <a class="website-logo navbar-brand">
-                <img src="Recipe-Land-logo.png" width="200" alt="logo" class="logo d-inline-block">
-              </a>
 
-              <button class="shopping-list-button btn btn-navbar btn-outline-success my-2 my-sm-0" type="submit"><a href="/index.html">Home <i class="fas fa-home"></i></a></button>
-
-              <div class="nav-buttons">
-                <button class="btn btn-navbar btn-navbar-users" type="submit"><a href="signin.html">Sign In/Register <i class="fas fa-user-circle" aria-hidden="true"></i></a>
-                </button>
-            </div>
+        <div class="nav-buttons">
+          <button class="btn btn-navbar btn-navbar-users" type="submit">
+            <a href="signin.html"
+              >Sign In/Register
+              <i class="fas fa-user-circle" aria-hidden="true"></i
+            ></a>
+          </button>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <div class="container content-container login-content" id="login-div">
       <form class="login-form">
-                <div class="form-group">
+        <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter email">
+          <input
+            type="email"
+            class="form-control"
+            id="emailField"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="passwordField" placeholder="Password">
+          <input
+            type="password"
+            class="form-control"
+            id="passwordField"
+            placeholder="Password"
+          />
         </div>
-        <button type="submit" class="btn btn-primary" onclick="login()">Log In</button>
-        <button type="submit" class="btn btn-primary" onclick="signup()">Sign Up</button>
-
+        <button type="submit" class="btn btn-primary" onclick="login()">
+          Log In
+        </button>
+        <button type="submit" class="btn btn-primary" onclick="signup()">
+          Sign Up
+        </button>
       </form>
-</div>
+    </div>
 
-<div class="container content-container user-content" id="user-div">
- <h2 class="h2 welcome-user"></h2>
-  <button type="submit" class="btn btn-primary" onclick="signout()">Sign Out</button>
-</div>
-  
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <div class="container content-container user-content" id="user-div">
+      <h2 class="h2 welcome-user"></h2>
+      <button type="submit" class="btn btn-primary" onclick="signout()">
+        Sign Out
+      </button>
+    </div>
 
-<script src="index2.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+    <script src="index2.js"></script>
 
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

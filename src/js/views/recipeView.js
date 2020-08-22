@@ -60,8 +60,8 @@ export const renderRecipe = (recipe, isLiked) => {
             This recipe was carefully designed and tested by: <strong>${
               recipe.author
             }</strong>. Please check out directions at their website:</p>
-        <button class="btn recipe-button" href=""${recipe.url}" target="_blank">
-            <p>Directions</p>
+        <button class="btn recipe-button">
+        <a href="${recipe.url}">Directions</a>
         </button>
             </div>
     `;

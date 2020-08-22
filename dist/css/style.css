@@ -31,10 +31,13 @@ margin: 0.25rem;
     background-color: #e26d5c !important;
     margin-bottom: 5%;
 }
-.search-form, button, a, .btn-navbar{
+.search-form, button, .btn-navbar{
   color: #431B0F;
   border-color: #a05547;
   background-color: #e26d5c;
+}
+a{
+  color: #431B0F;
 }
 .btn-navbar:hover{
   color: #431B0F;

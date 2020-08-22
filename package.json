@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
+    "start": "node server.js",
+    "main": "index.js",
+    "test": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "heroku-postbuild": "webpack -p"
   },
   "dependencies": {
     "anymatch": "^3.1.1",
@@ -31,6 +34,7 @@
     "estraverse": "^4.3.0",
     "events": "^3.2.0",
     "evp_bytestokey": "^1.0.3",
+    "express": "^4.17.1",
     "figgy-pudding": "^3.5.2",
     "find-cache-dir": "^2.1.0",
     "flush-write-stream": "^1.1.1",

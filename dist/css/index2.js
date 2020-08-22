@@ -53,7 +53,7 @@ login = () => {
     .catch(function (error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      window.alert('Unable to login. Error: ', errorMessage);
+      window.alert('Unable to login. Make sure you entered the right email and password. Error: ', error);
       console.log(errorMessage);
     });
   document.querySelector(
@@ -70,7 +70,7 @@ signup = () => {
     .catch(function (error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      window.alert('Unable to signup. Error: ', errorMessage);
+      window.alert('Unable to signup. Make sure you entered a valid email address and your password is at least 6 characters long. Error: ', error);
       console.log(errorMessage);
     });
   document.querySelector(

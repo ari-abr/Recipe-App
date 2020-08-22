@@ -8,12 +8,9 @@ var firebaseConfig = {
   messagingSenderId: '103916854940',
   appId: '1:103916854940:web:defd27ef83a5db46f41759',
 };
-
 firebase.initializeApp(firebaseConfig);
-
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    var database = firebase.database();
     console.log('user is signed in!');
     document.getElementById('login-div').style.display = 'none';
     document.getElementById('user-div').style.display = 'block';
@@ -47,13 +44,13 @@ getUserEmail = () => {
 login = () => {
   var userEmail = document.getElementById('emailField').value;
   var userPassword = document.getElementById('passwordField').value;
+  console.log(userEmail, userPassword)
   firebase
     .auth()
     .signInWithEmailAndPassword(userEmail, userPassword)
     .catch(function (error) {
-      var errorCode = error.code;
       var errorMessage = error.message;
-      window.alert('Unable to login. Make sure you entered the right email and password. Error: ', error);
+      window.alert('Unable to login. Make sure you entered the right email and the right password. Error: ', error);
       console.log(errorMessage);
     });
   document.querySelector(
@@ -93,3 +90,18 @@ signout = () => {
       );
     });
 };
+
+document.querySelector(`.signin-btn`).addEventListener('click', (e) => {
+  e.preventDefault();
+login();
+})
+
+document.querySelector(`.signup-btn`).addEventListener('click', (e) => {
+  e.preventDefault();
+signup();
+})
+
+document.querySelector(`.signout-btn`).addEventListener('click', (e) => {
+  e.preventDefault();
+signout();
+})

@@ -14,13 +14,7 @@ import { elements, renderLoader, clearLoader } from './views/base';
 
 //set up Firebase
 var firebaseConfig = {
-  apiKey: 'AIzaSyCJ8rFpMai7DJRexW_0Up9sAjwMDRNST0o',
-  authDomain: 'recipewebsite-6c3a8.firebaseapp.com',
-  databaseURL: 'https://recipewebsite-6c3a8.firebaseio.com',
-  projectId: 'recipewebsite-6c3a8',
-  storageBucket: 'recipewebsite-6c3a8.appspot.com',
-  messagingSenderId: '103916854940',
-  appId: '1:103916854940:web:defd27ef83a5db46f41759',
+  //private info
 };
 firebase.initializeApp(firebaseConfig);
 firebase.auth().onAuthStateChanged(function (user) {
